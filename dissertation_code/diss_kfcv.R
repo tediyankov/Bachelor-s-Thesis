@@ -64,7 +64,7 @@ for (i in 1:k) {
   
   # Calculate the RMSE and R^2 for the test data
   metrics[i, "RMSE"] <- sqrt(mean((test_data$totalrefugees - test_pred)^2, na.rm = T))
-  metrics[i, "R^2"] <- summary(model)$r.squared
+  metrics[i, "R^2"] <- summary(model)$adj.r.squared
 }
 
 # Print the average performance metrics across all folds
@@ -72,7 +72,7 @@ cat("Average RMSE:", mean(metrics[, "RMSE"], na.rm = T), "\n")
 cat("Average R^2:", mean(metrics[, "R^2"]), "\n")
 
 ## Average RMSE: 1.664438 
-## Average R^2: 0.7698662  
+## Average R^2: 0.7461517  
 
 ## CART, ethnic ----------------------------------------------------------------
 
@@ -141,7 +141,7 @@ for (i in 1:k) {
   
   # Calculate the RMSE and R^2 for the test data
   metrics[i, "RMSE"] <- sqrt(mean((test_data$totalrefugees - test_pred)^2, na.rm = T))
-  metrics[i, "R^2"] <- summary(model)$r.squared
+  metrics[i, "R^2"] <- summary(model)$adj.r.squared
 }
 
 # Print the average performance metrics across all folds
@@ -149,7 +149,7 @@ cat("Average RMSE:", mean(metrics[, "RMSE"], na.rm = T), "\n")
 cat("Average R^2:", mean(metrics[, "R^2"]), "\n")
 
 ## Average RMSE: 1.663257
-## Average R^2: 0.772011  
+## Average R^2: 0.751582  
 
 ## mean, no ethnic -------------------------------------------------------------
 
@@ -213,7 +213,7 @@ for (i in 1:k) {
   
   # Calculate the RMSE and R^2 for the test data
   metrics[i, "RMSE"] <- sqrt(mean((test_data$totalrefugees - test_pred)^2, na.rm = T))
-  metrics[i, "R^2"] <- summary(model)$r.squared
+  metrics[i, "R^2"] <- summary(model)$adj.r.squared
 }
 
 # Print the average performance metrics across all folds
@@ -221,7 +221,7 @@ cat("Average RMSE:", mean(metrics[, "RMSE"], na.rm = T), "\n")
 cat("Average R^2:", mean(metrics[, "R^2"]), "\n")
 
 ## Average RMSE: 1.551051 
-## Average R^2: 0.8924823 
+## Average R^2: 0.8817866 
 
 ## mean, ethnic ----------------------------------------------------------------
 
@@ -290,7 +290,7 @@ for (i in 1:k) {
   
   # Calculate the RMSE and R^2 for the test data
   metrics[i, "RMSE"] <- sqrt(mean((test_data$totalrefugees - test_pred)^2, na.rm = T))
-  metrics[i, "R^2"] <- summary(model)$r.squared
+  metrics[i, "R^2"] <- summary(model)$adj.r.squared
 }
 
 # Print the average performance metrics across all folds
@@ -298,7 +298,7 @@ cat("Average RMSE:", mean(metrics[, "RMSE"], na.rm = T), "\n")
 cat("Average R^2:", mean(metrics[, "R^2"]), "\n")
 
 ## Average RMSE: 1.578868 
-## Average R^2: 0.8933153
+## Average R^2: 0.8824293
 
 
 
